@@ -4,6 +4,11 @@
 
 /* ---------===== auth models =====--------- */
 
+export interface Lyric {
+  lyric: string;
+  name: string;
+}
+
 export interface Profile {
   name: string;
   photo?: string;

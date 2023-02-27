@@ -12,6 +12,7 @@ import ChangePassword from './pages/ChangePassword/ChangePassword'
 // components
 import NavBar from './components/NavBar/NavBar'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
+import AddLyric from './components/AddLyric/AddLyric'
 
 // services
 import * as authService from './services/authService'
@@ -64,6 +65,10 @@ function App(): JSX.Element {
         <Route
           path="/login"
           element={<Login handleAuthEvt={handleAuthEvt} />}
+        />
+        <Route 
+          path="/lyric"
+          element={<AddLyric />}
         />
         <Route
           path="/profiles"
