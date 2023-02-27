@@ -18,6 +18,7 @@ import LyricList from './components/Lyrics/LyricList'
 // services
 import * as authService from './services/authService'
 import * as profileService from './services/profileService'
+import * as lyricService from './services/LyricService'
 
 // stylesheets
 import './App.css'
@@ -35,6 +36,12 @@ function App(): JSX.Element {
   const [lyrics, setLyrics] = useState<Lyric[]>([])
 
   useEffect((): void => {
+    const fetchLyrics = async (): Promise<void> => {
+      const lyricsData:Lyric[] = await lyricService.getAllLyrics()
+      setLyrics(lyricsData)
+    }
+    if (user) fetchLyrics()
+    
     const fetchProfiles = async (): Promise<void> => {
       try {
         const profileData: Profile[] = await profileService.getAllProfiles()
@@ -74,8 +81,8 @@ function App(): JSX.Element {
           element={<AddLyric />}
         />
         <Route 
-          path='/lyric'
-          element={<LyricList/>}
+          path='/lyrics'
+          element={<LyricList lyrics={lyrics}/>}
         />
         <Route
           path="/profiles"
