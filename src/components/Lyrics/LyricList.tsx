@@ -1,4 +1,6 @@
 import { Lyric } from "../../types/models";
+import LyricCard from "../LyricCard/LyricCard"
+
 
 interface LyricProps{
   lyrics: Lyric[]
@@ -6,7 +8,10 @@ interface LyricProps{
 
 const LyricList = (props:LyricProps) => {
   return ( 
+    <>
     <h1>lyric list:</h1>
+    <LyricCard />
+    </>
   );
 }
  
