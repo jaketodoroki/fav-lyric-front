@@ -1,4 +1,21 @@
-const AddLyric = () => {
+import React, { ReactEventHandler, useState } from "react";
+import { CreateLyricFormData } from "../../types/forms";
+
+interface CreateLyricProps{
+  handleCreate: (FormData: CreateLyricFormData) => void
+}
+
+const AddLyric = (): JSX.Element => {
+
+  const [form, setForm] = useState<CreateLyricFormData>({
+    name: '',
+    lyric: '',
+  })
+
+  const handleChange = (event:React.ChangeEvent<HTMLInputElement>): void =>{
+    setForm({ ...form, [event.target.name]: event.target.value })
+  }
+
   return ( 
     <>
     <main className='addLyric'>
