@@ -1,6 +1,21 @@
-const LyricCard = () => {
+import { Lyric } from "../../types/models"
+
+interface LyricCardProps{
+  lyrics: Lyric[],
+}
+
+const LyricCard = (props:LyricCardProps):JSX.Element => {
+  const {lyrics} = props
+  if(!lyrics.length) return <p>Loading</p>
   return ( 
-    <h1>Lyric card</h1>
+    <>
+    {lyrics.map((lyric) => 
+    <>
+      <p>name:{lyric.name}</p>
+      <p>lyric:{lyric.lyric}</p>
+    </>
+    )}
+    </>
    );
 }
  

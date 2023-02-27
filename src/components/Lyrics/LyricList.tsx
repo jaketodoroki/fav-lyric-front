@@ -7,10 +7,11 @@ interface LyricProps{
 }
 
 const LyricList = (props:LyricProps) => {
+  const {lyrics} = props
   return ( 
     <>
     <h1>lyric list:</h1>
-    <LyricCard />
+    <LyricCard lyrics={lyrics}/>
     </>
   );
 }
