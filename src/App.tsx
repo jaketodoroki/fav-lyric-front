@@ -13,6 +13,7 @@ import ChangePassword from './pages/ChangePassword/ChangePassword'
 import NavBar from './components/NavBar/NavBar'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 import AddLyric from './components/AddLyric/AddLyric'
+import LyricList from './components/Lyrics/LyricList'
 
 // services
 import * as authService from './services/authService'
@@ -22,7 +23,7 @@ import * as profileService from './services/profileService'
 import './App.css'
 
 // types
-import { User, Profile } from './types/models'
+import { User, Profile, Lyric } from './types/models'
 
 function App(): JSX.Element {
   const navigate = useNavigate()
@@ -30,6 +31,8 @@ function App(): JSX.Element {
   const [user, setUser] = useState<User | null>(authService.getUser())
 
   const [profiles, setProfiles] = useState<Profile[]>([])
+
+  const [lyrics, setLyrics] = useState<Lyric[]>([])
 
   useEffect((): void => {
     const fetchProfiles = async (): Promise<void> => {
@@ -69,6 +72,10 @@ function App(): JSX.Element {
         <Route 
           path="/lyric"
           element={<AddLyric />}
+        />
+        <Route 
+          path='/lyric'
+          element={<LyricList/>}
         />
         <Route
           path="/profiles"
