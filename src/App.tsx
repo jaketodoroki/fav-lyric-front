@@ -37,8 +37,12 @@ function App(): JSX.Element {
 
   useEffect((): void => {
     const fetchLyrics = async (): Promise<void> => {
-      const lyricsData:Lyric[] = await lyricService.getAllLyrics()
+    try {
+      const lyricsData: Lyric[] = await lyricService.getAllLyrics()
       setLyrics(lyricsData)
+    } catch (error) {
+      console.log(error)
+    }
     }
     if (user) fetchLyrics()
     
