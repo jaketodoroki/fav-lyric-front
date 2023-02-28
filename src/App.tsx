@@ -73,6 +73,13 @@ function App(): JSX.Element {
     navigate('/lyrics')
   }
 
+  const handleDeleteLyric = async (lyric:string) => {
+    const deletedLyric = await lyricService.deleteLyric(lyric)
+    const updatedLyrics = await lyricService.getAllLyrics()
+    setLyrics(updatedLyrics)
+    navigate(`/lyrics`)
+  }
+
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout} />
@@ -92,7 +99,7 @@ function App(): JSX.Element {
         />
         <Route 
           path='/lyrics'
-          element={<LyricList lyrics={lyrics}/>}
+          element={<LyricList lyrics={lyrics} user={user} handleDeleteLyric={handleDeleteLyric}/>}
         />
         <Route
           path="/profiles"

@@ -7,6 +7,10 @@
 export interface Lyric {
   lyric: string;
   name: string;
+  profileId: number;
+  createdAt: string;
+  updatedAt: string;
+  id: number;
 }
 
 export interface Profile {
@@ -15,6 +19,7 @@ export interface Profile {
   id: number;
   createdAt: string;
   updatedAt: string;
+  lyrics: Lyric[];
 }
 
 export interface User {

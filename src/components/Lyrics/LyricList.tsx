@@ -1,9 +1,11 @@
-import { Lyric } from "../../types/models";
+import { Lyric, User } from "../../types/models";
 import LyricCard from "../LyricCard/LyricCard"
 
 
 interface LyricProps{
-  lyrics: Lyric[]
+  lyrics: Lyric[];
+  user: User | null;
+  handleDeleteLyric: (lyric:string) => void
 }
 
 const LyricList = (props:LyricProps) => {
@@ -12,7 +14,7 @@ const LyricList = (props:LyricProps) => {
     <>
     <h1>lyric list:</h1>
     <div className="lyricListContainer">
-      <LyricCard lyrics={lyrics}/>
+      <LyricCard lyrics={lyrics} user={props.user} handleDeleteLyric={props.handleDeleteLyric}/>
     </div>
     </>
   );

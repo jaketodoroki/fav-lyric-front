@@ -33,8 +33,22 @@ const create =async (lyricData:object) => {
   }
 }
 
+const deleteLyric = async (name:string) => {
+  try {
+    const res = await fetch(`${BASE_URL}/${name}`, {
+      method: 'DELETE',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+      }
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error);
+  }  
+}
 
 export {
   getAllLyrics,
-  create
+  create,
+  deleteLyric,
  }
