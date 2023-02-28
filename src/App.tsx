@@ -84,7 +84,7 @@ function App(): JSX.Element {
   const handleUpdateLyric =async (lyricData:Lyric) => {
     const updatedLyric = await lyricService.updateLyric(lyricData)
     const updatedLyrics = await lyricService.getAllLyrics()
-    setLyrics(updatedLyric)
+    setLyrics(updatedLyrics)
     navigate('/lyrics')
   }
 
@@ -126,6 +126,12 @@ function App(): JSX.Element {
               <ChangePassword handleAuthEvt={handleAuthEvt} />
             </ProtectedRoute>
           }
+        />
+        <Route path="/lyrics/:lyricName" element={
+          <ProtectedRoute user={user}>
+          <UpdateLyric handleUpdateLyric={handleUpdateLyric}/>
+          </ProtectedRoute> 
+        } 
         />
       </Routes>
     </>

@@ -11,11 +11,14 @@ interface LyricCardProps{
 const LyricCard = (props:LyricCardProps):JSX.Element => {
   const {lyrics} = props
   if(!lyrics.length) return <p>Loading</p>
+
   return ( 
     <>
     {lyrics.map((lyric) => 
-    <>
-      <div className="lyricCard" key={lyric.name}>
+    // <>
+      <main key={lyric.id}>
+
+      <div className="lyricCard">
         <p id="lyricName">name:{lyric.name}</p>
         <p id="lyric">lyric:{lyric.lyric}</p>
       {lyric.profileId === props.user?.id &&
@@ -23,15 +26,14 @@ const LyricCard = (props:LyricCardProps):JSX.Element => {
         <div id='button'>
           <button id='delete' onClick={() => props.handleDeleteLyric(lyric.name)}>Delete</button>
         </div>
-        <div>
-          <Link to={`/lyrics/${lyric.name}/edit`} state={lyric}>Update Lyric</Link>
+        <div id="selection">
+          <Link to={`/lyrics/${lyric.name}`} state={lyric}>Update Lyric</Link>
         </div>
         </>
       }
       </div>
-      {/* <div className="lyric"key={lyric.lyric}> */}
-      {/* </div> */}
-    </>
+      </main>
+    // </>
     )}
     </>
    );

@@ -30,3 +30,8 @@ export interface CreateLyricFormData {
   name: string;
   lyric: string;
 }
+
+export interface UpdateLyricFormData{
+  name:string;
+  lyric:string;
+}

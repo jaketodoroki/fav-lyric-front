@@ -49,15 +49,17 @@ const deleteLyric = async (name:string) => {
 
 const updateLyric =async (lyricData:Lyric) => {
   try {
-    const res = await fetch(`${BASE_URL}/${lyricData.name}`, {
+    const res = await fetch(`${BASE_URL}/${lyricData.id}`, {
       method: 'PUT',
       headers: {
         'Authorization': `Bearer ${tokenService.getToken()}`,
-      }
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(lyricData)
     })
     return res.json()
   } catch (error) {
-    
+    console.log(error)
   }
 }
 
