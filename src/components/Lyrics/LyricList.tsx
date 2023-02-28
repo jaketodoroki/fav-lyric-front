@@ -5,7 +5,8 @@ import LyricCard from "../LyricCard/LyricCard"
 interface LyricProps{
   lyrics: Lyric[];
   user: User | null;
-  handleDeleteLyric: (lyric:string) => void
+  handleDeleteLyric: (lyric:string) => void;
+  handleUpdateLryic: (lyricData:Lyric) => void;
 }
 
 const LyricList = (props:LyricProps) => {
@@ -14,7 +15,7 @@ const LyricList = (props:LyricProps) => {
     <>
     <h1>lyric list:</h1>
     <div className="lyricListContainer">
-      <LyricCard lyrics={lyrics} user={props.user} handleDeleteLyric={props.handleDeleteLyric}/>
+      <LyricCard lyrics={lyrics} user={props.user} handleDeleteLyric={props.handleDeleteLyric} handleUpdateLyric={props.handleUpdateLryic}/>
     </div>
     </>
   );

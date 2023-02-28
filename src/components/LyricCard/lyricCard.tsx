@@ -1,9 +1,11 @@
 import { Lyric, User } from "../../types/models"
+import { Link } from "react-router-dom"
 
 interface LyricCardProps{
   lyrics: Lyric[];
   user: User| null;
-  handleDeleteLyric: (name:string) => void
+  handleDeleteLyric: (name:string) => void;
+  handleUpdateLyric: (lyricData:Lyric) => void;
 }
 
 const LyricCard = (props:LyricCardProps):JSX.Element => {
@@ -17,9 +19,14 @@ const LyricCard = (props:LyricCardProps):JSX.Element => {
         <p id="lyricName">name:{lyric.name}</p>
         <p id="lyric">lyric:{lyric.lyric}</p>
       {lyric.profileId === props.user?.id &&
+      <>
         <div id='button'>
           <button id='delete' onClick={() => props.handleDeleteLyric(lyric.name)}>Delete</button>
         </div>
+        <div>
+          <Link to={`/lyrics/${lyric.name}/edit`} state={lyric}>Update Lyric</Link>
+        </div>
+        </>
       }
       </div>
       {/* <div className="lyric"key={lyric.lyric}> */}

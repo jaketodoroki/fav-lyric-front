@@ -47,8 +47,23 @@ const deleteLyric = async (name:string) => {
   }  
 }
 
+const updateLyric =async (lyricData:Lyric) => {
+  try {
+    const res = await fetch(`${BASE_URL}/${lyricData.name}`, {
+      method: 'PUT',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+      }
+    })
+    return res.json()
+  } catch (error) {
+    
+  }
+}
+
 export {
   getAllLyrics,
   create,
   deleteLyric,
+  updateLyric
  }

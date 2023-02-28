@@ -14,6 +14,7 @@ import NavBar from './components/NavBar/NavBar'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 import AddLyric from './components/AddLyric/AddLyric'
 import LyricList from './components/Lyrics/LyricList'
+import UpdateLyric from './components/UpdateLyric/UpdateLyric'
 
 // services
 import * as authService from './services/authService'
@@ -77,7 +78,14 @@ function App(): JSX.Element {
     const deletedLyric = await lyricService.deleteLyric(lyric)
     const updatedLyrics = await lyricService.getAllLyrics()
     setLyrics(updatedLyrics)
-    navigate(`/lyrics`)
+    navigate('/lyrics')
+  }
+
+  const handleUpdateLyric =async (lyricData:Lyric) => {
+    const updatedLyric = await lyricService.updateLyric(lyricData)
+    const updatedLyrics = await lyricService.getAllLyrics()
+    setLyrics(updatedLyric)
+    navigate('/lyrics')
   }
 
   return (
@@ -99,7 +107,7 @@ function App(): JSX.Element {
         />
         <Route 
           path='/lyrics'
-          element={<LyricList lyrics={lyrics} user={user} handleDeleteLyric={handleDeleteLyric}/>}
+          element={<LyricList lyrics={lyrics} user={user} handleDeleteLyric={handleDeleteLyric} handleUpdateLryic={handleUpdateLyric} />}
         />
         <Route
           path="/profiles"
