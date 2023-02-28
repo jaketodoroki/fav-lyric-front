@@ -192,3 +192,21 @@ nav li {
     font-size: 15px;
   }
 }
+
+.lyricCard {
+  border: 1px solid black;
+  margin: 55px;
+  height: 100px;
+  width: 150px;
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 5px;
+}
+
+.lyricListContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}

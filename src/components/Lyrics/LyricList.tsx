@@ -11,7 +11,9 @@ const LyricList = (props:LyricProps) => {
   return ( 
     <>
     <h1>lyric list:</h1>
-    <LyricCard lyrics={lyrics}/>
+    <div className="lyricListContainer">
+      <LyricCard lyrics={lyrics}/>
+    </div>
     </>
   );
 }

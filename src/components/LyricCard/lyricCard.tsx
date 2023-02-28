@@ -1,7 +1,8 @@
-import { Lyric } from "../../types/models"
+import { Lyric, User } from "../../types/models"
 
 interface LyricCardProps{
   lyrics: Lyric[],
+  // user: User| null;
 }
 
 const LyricCard = (props:LyricCardProps):JSX.Element => {
@@ -11,8 +12,12 @@ const LyricCard = (props:LyricCardProps):JSX.Element => {
     <>
     {lyrics.map((lyric) => 
     <>
-      <p>name:{lyric.name}</p>
-      <p>lyric:{lyric.lyric}</p>
+      <div className="lyricCard" key={lyric.name}>
+        <p id="lyricName">name:{lyric.name}</p>
+        <p id="lyric">lyric:{lyric.lyric}</p>
+      </div>
+      {/* <div className="lyric"key={lyric.lyric}> */}
+      {/* </div> */}
     </>
     )}
     </>

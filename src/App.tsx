@@ -67,6 +67,12 @@ function App(): JSX.Element {
     setUser(authService.getUser())
   }
 
+  const handleAddLyric = async (lyricData:object):Promise<void> => {
+    const newLyric = await lyricService.create(lyricData)
+    setLyrics([newLyric, ...lyrics])
+    navigate('/lyrics')
+  }
+
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout} />
@@ -82,7 +88,7 @@ function App(): JSX.Element {
         />
         <Route 
           path="/lyric"
-          element={<AddLyric />}
+          element={<AddLyric handleAddLyric={handleAddLyric}/>}
         />
         <Route 
           path='/lyrics'
