@@ -25,10 +25,10 @@ const LyricCard = (props:LyricCardProps):JSX.Element => {
       <>
         <div id='button'>
           <button id='delete' onClick={() => props.handleDeleteLyric(lyric.name)}>Delete</button>
-        </div>
-        <div id="selection">
           <Link id='update'to={`/lyrics/${lyric.name}`} state={lyric}>Update Lyric</Link>
         </div>
+        {/* <div id="selection">
+        </div> */}
         </>
       }
       </div>

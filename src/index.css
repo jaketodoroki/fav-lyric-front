@@ -1,67 +1,47 @@
 * {
   box-sizing: border-box;
 }
-
-html,
-body {
-  margin: 0;
-  background-color: gray;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: sofia-pro, sans-serif;
-  --primary: #F2B138;
-  --secondary: #6574d0;
-  --outline: #ffffff;
-  --background: #f2f4f8;
-  --border: rgb(220, 220, 220);
-  --card-background: rgb(255, 255, 255);
+html {
+  margin-top: 75px;
+  background-color: #FDE8E9;
 }
 
 main {
-  margin-top: 50px;
-  /* min-height: calc(100vh - 80px); */
+ 
+  /* margin-left: auto; */
+  margin-top: 50px; 
+  /* height: 20px; */
+  border: 1px solid black;
+  /* flex-direction: column; */
+  /* align-items: center; */
+  text-align: center;
+  /* height: fit-content; */
+  /* position: relative; */
+  /* padding: 75px; */
+  border-radius: 5px;
+  border: 1px solid var(--border);
+  background-color: white;
+  box-shadow: -1px 5px 19px -5px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: -1px 5px 19px -5px rgba(0, 0, 0, 0.25); 
+  -webkit-box-shadow: -1px 5px 19px -5px rgba(0, 0, 0, 0.25);
+
+  /* gap: 140px; */
+  /* display: grid; */
+  /* padding: 20px; */
+  /* grid-template-columns: repeat(1, 1fr); */
+
 }
 
-h1,
-h2,
-h3 {
-  margin: 8px 0px 16px 0px;
+.lyricListContainer{
+  gap: 14px;
+  /* display: grid; */
+  padding: 20px;
+  /* grid-template-columns: repeat(1, 1fr); */
 }
 
 h1 {
   font-size: 24px;
   font-weight: 600;
-}
-
-h2 {
-  font-size: 20px;
-  font-weight: 500;
-}
-
-h3 {
-  font-size: 18px;
-  font-weight: 500;
-}
-
-h4 {
-  font-size: 16px;
-  font-weight: 500;
-  margin-bottom: 2px;
-}
-
-h5 {
-  font-size: 12px;
-  font-weight: 500;
-}
-
-p {
-  margin: 0;
-  opacity: .4;
-  width: 100%;
-  font-size: 16px;
-  line-height: 28px;
-  text-align: justify;
-  text-align-last: center;
 }
 
 a {
@@ -86,14 +66,6 @@ article {
   -webkit-box-shadow: -1px 5px 19px -5px rgba(0, 0, 0, 0.25);
 }
 
-article section {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 article>img {
   width: 80px;
   height: 80px;
@@ -102,35 +74,13 @@ article>img {
   border: 3px solid white;
 }
 
-article * {
-  z-index: 0;
-}
-
-section img {
-  width: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-article::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  width: 100%;
-  height: 77px;
-  background-color: var(--secondary);
-}
-
 .list {
   min-height: fit-content;
   gap: 14px;
   display: grid;
   padding: 20px;
   grid-template-columns: repeat(1, 1fr);
+
 }
 
 @media only screen and (min-width: 900px) {
@@ -153,19 +103,19 @@ article::before {
 
 nav {
   top: 0;
-  z-index: 1;
+  /* margin: 0px; */
+  /* margin-left: -20px; */
+  /* margin-right: 200px; */
+  /* z-index: 1; */
   width: 100%;
-  height: 80px;
+  height: 60px;
   display: flex;
   position: fixed;
   padding: 12px 20px;
   align-items: center;
-  background: white;
-  border-bottom: 1px solid rgb(200, 200, 200);
-}
-
-nav img {
-  width: 50px;
+  background: #E3BAC6;
+  /* display: table;  */
+  /* border-bottom: black; */
 }
 
 nav ul {
@@ -194,8 +144,8 @@ nav li {
 }
 
 .lyricCard {
-  border: 1px solid black;
-  margin: 50px;
+  /* border: 1px solid black; */
+  margin: 10px;
   height: 150px;
   width: 200px;
   object-fit: cover;
@@ -203,6 +153,7 @@ nav li {
   flex-direction: column;
   justify-content: flex-start;
   padding: 5px;
+  padding-top: 20px;
 }
 
 .lyricListContainer {

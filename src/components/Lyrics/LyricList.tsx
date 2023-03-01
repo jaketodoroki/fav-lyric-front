@@ -12,6 +12,7 @@ interface LyricProps{
 const LyricList = (props:LyricProps) => {
   const {lyrics} = props
   return ( 
+    
     <>
     <h1 id="lyricListHeader">lyric list:</h1>
     <div className="lyricListContainer">
