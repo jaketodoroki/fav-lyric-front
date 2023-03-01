@@ -1,3 +1,5 @@
+# Fav Lyric
+![alt text](./public/Screenshot1.png)
 ![alt text](./public/Screenshot2.png)
 
 ## [CHECK IT OUT](https://fav-lyric.netlify.app/)
