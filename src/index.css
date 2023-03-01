@@ -7,29 +7,15 @@ html {
 }
 
 main {
- 
-  /* margin-left: auto; */
   margin-top: 50px; 
-  /* height: 20px; */
-  border: 1px solid black;
-  /* flex-direction: column; */
-  /* align-items: center; */
   text-align: center;
-  /* height: fit-content; */
-  /* position: relative; */
-  /* padding: 75px; */
+  padding: 75px;
   border-radius: 5px;
   border: 1px solid var(--border);
   background-color: white;
   box-shadow: -1px 5px 19px -5px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: -1px 5px 19px -5px rgba(0, 0, 0, 0.25); 
   -webkit-box-shadow: -1px 5px 19px -5px rgba(0, 0, 0, 0.25);
-
-  /* gap: 140px; */
-  /* display: grid; */
-  /* padding: 20px; */
-  /* grid-template-columns: repeat(1, 1fr); */
-
 }
 
 .lyricListContainer{
@@ -60,7 +46,8 @@ article {
   padding: 36px;
   border-radius: 5px;
   border: 1px solid var(--border);
-  background-color: var(--card-background);
+  /* background-color: var(--card-background); */
+  background-color: white;
   box-shadow: -1px 5px 19px -5px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: -1px 5px 19px -5px rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: -1px 5px 19px -5px rgba(0, 0, 0, 0.25);
@@ -80,7 +67,7 @@ article>img {
   display: grid;
   padding: 20px;
   grid-template-columns: repeat(1, 1fr);
-
+  background-color: #E3BAC6;
 }
 
 @media only screen and (min-width: 900px) {
