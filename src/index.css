@@ -20,9 +20,7 @@ main {
 
 .lyricListContainer{
   gap: 14px;
-  /* display: grid; */
   padding: 20px;
-  /* grid-template-columns: repeat(1, 1fr); */
 }
 
 h1 {
@@ -46,7 +44,6 @@ article {
   padding: 36px;
   border-radius: 5px;
   border: 1px solid var(--border);
-  /* background-color: var(--card-background); */
   background-color: white;
   box-shadow: -1px 5px 19px -5px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: -1px 5px 19px -5px rgba(0, 0, 0, 0.25);
@@ -90,10 +87,6 @@ article>img {
 
 nav {
   top: 0;
-  /* margin: 0px; */
-  /* margin-left: -20px; */
-  /* margin-right: 200px; */
-  /* z-index: 1; */
   width: 100%;
   height: 60px;
   display: flex;
@@ -101,8 +94,6 @@ nav {
   padding: 12px 20px;
   align-items: center;
   background: #E3BAC6;
-  /* display: table;  */
-  /* border-bottom: black; */
 }
 
 nav ul {
@@ -131,7 +122,6 @@ nav li {
 }
 
 .lyricCard {
-  /* border: 1px solid black; */
   margin: 10px;
   height: 150px;
   width: 200px;

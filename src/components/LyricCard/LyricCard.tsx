@@ -15,9 +15,7 @@ const LyricCard = (props:LyricCardProps):JSX.Element => {
   return ( 
     <>
     {lyrics.map((lyric) => 
-    // <>
       <main key={lyric.id}>
-
       <div className="lyricCard">
         <p id="lyricName">name:{lyric.name}</p>
         <p id="lyric">lyric:{lyric.lyric}</p>
@@ -27,13 +25,10 @@ const LyricCard = (props:LyricCardProps):JSX.Element => {
           <button id='delete' onClick={() => props.handleDeleteLyric(lyric.name)}>Delete</button>
           <Link id='update'to={`/lyrics/${lyric.name}`} state={lyric}>Update Lyric</Link>
         </div>
-        {/* <div id="selection">
-        </div> */}
         </>
       }
       </div>
       </main>
-    // </>
     )}
     </>
    );
