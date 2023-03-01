@@ -18,8 +18,8 @@ body {
 }
 
 main {
-  margin-top: 80px;
-  min-height: calc(100vh - 80px);
+  margin-top: 50px;
+  /* min-height: calc(100vh - 80px); */
 }
 
 h1,
@@ -195,9 +195,9 @@ nav li {
 
 .lyricCard {
   border: 1px solid black;
-  margin: 55px;
-  height: 100px;
-  width: 150px;
+  margin: 50px;
+  height: 150px;
+  width: 200px;
   object-fit: cover;
   display: flex;
   flex-direction: column;
@@ -209,4 +209,7 @@ nav li {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+}
+main {
+  border: 1px solid black;
 }

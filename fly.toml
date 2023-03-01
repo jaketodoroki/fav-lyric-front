@@ -13,7 +13,7 @@ processes = []
 
 [experimental]
   auto_rollback = true
-  cmd = "npm start"
+ 
 
 [[services]]
   http_checks = []
