@@ -1,4 +1,4 @@
-## [CHECK IT OUT][https://fav-lyric.netlify.app/]
+## [CHECK IT OUT](https://fav-lyric.netlify.app/)
 
 ### Fav-lyric! This app is a place to store and log your favorite lyrics! You can also check out other users favorite lyrics!
 
@@ -17,4 +17,4 @@
   - [ ] Add Spotify/Apple Music link
   - [ ] Allow users to like, comment, share other people favorite lyric
   
-### [BACKEND GITHUB][https://github.com/jaketodoroki/fav-lyric-back-end]
+### [BACKEND GITHUB](https://github.com/jaketodoroki/fav-lyric-back-end)
