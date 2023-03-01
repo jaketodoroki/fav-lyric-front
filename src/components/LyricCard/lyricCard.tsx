@@ -39,4 +39,4 @@ const LyricCard = (props:LyricCardProps):JSX.Element => {
    );
 }
  
-export default LyricCard;
+export {LyricCard}
