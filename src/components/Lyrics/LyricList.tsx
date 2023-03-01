@@ -14,7 +14,7 @@ const LyricList = (props:LyricProps) => {
   return ( 
     
     <>
-    <h1 id="lyricListHeader">lyric list:</h1>
+    {/* <h1 id="lyricListHeader">lyric list:</h1> */}
     <div className="lyricListContainer">
       <LyricCard lyrics={lyrics} user={props.user} handleDeleteLyric={props.handleDeleteLyric} handleUpdateLyric={props.handleUpdateLryic}/>
     </div>
