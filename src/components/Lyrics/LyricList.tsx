@@ -1,5 +1,5 @@
 import { Lyric, User } from "../../types/models";
-import LyricCard from "../LyricCard/lyricCard"
+import LyricCard from "../LyricCard/LyricCard"
 
 
 interface LyricProps{
