@@ -21,6 +21,7 @@ const AddLyric = (props:CreateLyricProps): JSX.Element => {
     props.handleAddLyric(form)
   }
 
+  
   return ( 
     <>
     <main className='addLyric'>
