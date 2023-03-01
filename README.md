@@ -1,3 +1,5 @@
+![alt text](./public/Screenshot2.png)
+
 ## [CHECK IT OUT](https://fav-lyric.netlify.app/)
 
 ### Fav-lyric! This app is a place to store and log your favorite lyrics! You can also check out other users favorite lyrics!
